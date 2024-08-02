@@ -10,14 +10,23 @@ master dataframe brings this down to a 1NF.
 To run the container you may clone this directory and either run the pipeline with Docker (recommended) or
 run the pipeline manually. The steps for each is listed below:
 
+**Cloning the directory:**
+1: Make an empty folder with any name <dir_name>
+2: cd <dir_name>
+3: git init
+4: git remote add origin https://github.com/ibitec7/DE_projects.git
+5: git sparse-checkout init --cone
+6: git sparse-checkout set employees/etl_pipeline
+7: git pull origin main
+
 **Running with Docker (recommended):**
-  1: cd etl_pipeline
-  2: docker build -t <image_name> .
-  3: docker run --name <container_name> -it <image_name>
+1: cd etl_pipeline
+2: docker build -t <image_name> .
+3: docker run --name <container_name> -it <image_name>
   4: docker cp <container_name>:/app/master_data </path/to/your_directory>
 
 **Running manually:**
-  1: cd etl_pipeline
-  2: bash run_pipeline.sh
-  3: cp master_data </path/to/your_directory>
+1: cd etl_pipeline
+2: bash run_pipeline.sh
+3: cp master_data </path/to/your_directory>
   

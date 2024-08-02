@@ -20,13 +20,13 @@ run the pipeline manually. The steps for each is listed below:
 - git pull origin main
 
 **Running with Docker (recommended):**
-- cd etl_pipeline
+- cd employees/etl_pipeline
 - docker build -t <image_name> .
--  docker run --name <container_name> -it <image_name>
--  docker cp <container_name>:/app/master_data </path/to/your_directory>
+- docker run --name <container_name> -it <image_name>
+- docker cp <container_name>:/app/master_data </path/to/your_directory>
 
 **Running manually:**
-- cd etl_pipeline
--  bash run_pipeline.sh
--   cp master_data </path/to/your_directory>
+- cd employees/etl_pipeline
+- bash run_pipeline.sh
+- cp master_data </path/to/your_directory>
   
